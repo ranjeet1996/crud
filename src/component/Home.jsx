@@ -49,25 +49,25 @@ const Home = () => {
   return (
     <div>
       <h1>CRUD</h1>
-      <div>
+      <div className="input">
         <form onSubmit={handleSubmit}>
-          <div>
+          <div className="name">
             <label>Name : </label>
-            <input name="name" value={inputs.name} onChange={handleChange} />
+            <input name="name" value={inputs.name} onChange={handleChange} placeholder="Enter Your Name" />
           </div>
-          <div>
+          <div className="email">
             <label>Email : </label>
-            <input name="email" value={inputs.email} onChange={handleChange} />
+            <input name="email" value={inputs.email} onChange={handleChange} placeholder="Enter Your Email" />
           </div>
-          <button type="submit">{editClick ? "update" : "Add"}</button>
+          <button className="button" type="submit">{editClick ? "update" : "Add"}</button>
         </form>
       </div>
 
-      <div>
+      <div className="output">
         <div className="data_val">
-          <h4>Name</h4>
-          <h4>Email</h4>
-          <h4>Action</h4>
+          <h3>Name</h3>
+          <h3>Email</h3>
+          <h3>Action</h3>
         </div>
 
         {tableData.map((item, i) => (
